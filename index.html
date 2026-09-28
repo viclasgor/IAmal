@@ -9,48 +9,69 @@
 <body>
   <header class="header">
     <div class="container header-inner">
-      <div class="logo">⚽ IAmal</div>
+      <div class="logo">⚽ IAmal <span class="live">● EN DIRECTO J1</span></div>
       <nav>
-        <a href="#inicio">Inicio</a>
         <a href="#resultados">Resultados</a>
         <a href="#noticias">Noticias</a>
         <a href="#plantillas">Plantillas</a>
+        <a href="#ligas">Ligas</a>
       </nav>
     </div>
   </header>
 
   <main class="container">
     <section id="inicio" class="hero">
-      <h1>Tu portal de fútbol con IA</h1>
-      <p>Resultados reales de LaLiga, clasificación, noticias y plantillas. Pregunta a <strong>IAmal</strong> abajo a la derecha.</p>
+      <div class="hero-badge">LaLiga · Premier · Serie A · Bundesliga · Ligue 1</div>
+      <h1>Todo el fútbol europeo, con IA</h1>
+      <p>20 equipos de LaLiga con resultados, clasificación y estrellas. Y <strong>IAmal</strong>, que responde sobre las 5 grandes ligas. Prueba abajo: filtra por tu equipo o abre el chat.</p>
+      <div class="hero-cta">
+        <a href="#resultados" class="btn">Ver jornada</a>
+        <a href="#plantillas" class="btn ghost">Ver plantillas</a>
+      </div>
       <div class="hero-cards">
-        <div class="stat"><span id="stat-partidos">0</span><small>partidos</small></div>
-        <div class="stat"><span id="stat-equipos">0</span><small>equipos</small></div>
+        <div class="stat"><span id="stat-partidos">0</span><small>partidos J1</small></div>
+        <div class="stat"><span id="stat-equipos">0</span><small>equipos LaLiga</small></div>
         <div class="stat"><span id="stat-noticias">0</span><small>noticias</small></div>
+        <div class="stat"><span>5</span><small>ligas en IAmal</small></div>
       </div>
     </section>
 
     <section id="resultados">
-      <h2>Resultados y clasificación</h2>
-      <input id="filtro-equipo" type="text" placeholder="Filtrar por equipo... (ej: Madrid)" />
+      <h2>Jornada 1 · Todos los partidos</h2>
+      <p class="sub">Los 10 partidos de los 20 equipos. Filtra por nombre.</p>
+      <input id="filtro-equipo" type="text" placeholder="Filtrar por equipo... (ej: Madrid, Betis, Rayo)" />
       <div id="lista-partidos" class="grid"></div>
-      <h3>Clasificación</h3>
+      <h3>Clasificación <span class="legend"><i class="dot top"></i>Champions <i class="dot down"></i>Descenso</span></h3>
       <table id="tabla-clasi">
-        <thead><tr><th>Equipo</th><th>PJ</th><th>G</th><th>E</th><th>P</th><th>Pts</th></tr></thead>
+        <thead><tr><th># Equipo</th><th>PJ</th><th>G</th><th>E</th><th>P</th><th>Pts</th></tr></thead>
         <tbody></tbody>
       </table>
     </section>
 
     <section id="noticias">
-      <h2>Noticias</h2>
-      <input id="buscador-noticias" type="text" placeholder="Buscar noticia... (ej: derbi)" />
+      <h2>Últimas noticias</h2>
+      <p class="sub">Crónicas de la jornada + guías europeas.</p>
+      <input id="buscador-noticias" type="text" placeholder="Buscar noticia... (ej: madrid, premier, derbi)" />
       <div id="lista-noticias" class="grid"></div>
     </section>
 
     <section id="plantillas">
-      <h2>Plantillas</h2>
+      <h2>Plantillas · 20 equipos</h2>
+      <p class="sub">Estrellas por equipo (base 25/26). Elige uno:</p>
       <select id="selector-equipo"></select>
       <div id="lista-jugadores" class="grid"></div>
+    </section>
+
+    <section id="ligas">
+      <h2>5 grandes ligas en IAmal</h2>
+      <p class="sub">LaLiga completa en la web. Las otras 4, pregúntaselas al bot: escribe <em>"dime equipos de la Premier"</em>, <em>"lista la Serie A"</em>...</p>
+      <div class="grid">
+        <div class="card"><strong>LaLiga</strong><p>20 equipos con resultados y plantillas.</p></div>
+        <div class="card"><strong>Premier League</strong><p>20 equipos ingleses en IAmal.</p></div>
+        <div class="card"><strong>Serie A</strong><p>20 equipos italianos en IAmal.</p></div>
+        <div class="card"><strong>Bundesliga</strong><p>18 equipos alemanes en IAmal.</p></div>
+        <div class="card"><strong>Ligue 1</strong><p>18 equipos franceses en IAmal.</p></div>
+      </div>
     </section>
   </main>
 
@@ -61,16 +82,16 @@
     <div id="chat-msgs"></div>
     <div class="chat-quick">
       <button data-q="¿Quién va líder?">Líder</button>
-      <button data-q="¿Qué partidos hay?">Partidos</button>
-      <button data-q="Dime noticias">Noticias</button>
+      <button data-q="Dime equipos de la Premier">Premier</button>
+      <button data-q="Plantilla del Betis">Betis</button>
     </div>
     <div class="chat-input">
-      <input id="chat-text" type="text" placeholder="Pregunta algo..." />
+      <input id="chat-text" type="text" placeholder="Pregunta algo de fútbol..." />
       <button id="chat-send">Enviar</button>
     </div>
   </div>
 
-  <footer><div class="container footer-inner"><span>© 2026 IAmal · Portal de fútbol</span><span><a href="#inicio">Inicio</a> · <a href="#resultados">Resultados</a> · <a href="#noticias">Noticias</a> · <a href="#plantillas">Plantillas</a> · <a href="mailto:hola@iamal.es">Contacto</a></span><small>Datos de LaLiga con fines informativos. Proyecto universitario MVP.</small></div></footer>
+  <footer><div class="container footer-inner"><span>© 2026 IAmal · Portal de fútbol</span><span><a href="#resultados">Resultados</a> · <a href="#noticias">Noticias</a> · <a href="#plantillas">Plantillas</a> · <a href="#ligas">Ligas</a> · <a href="mailto:hola@iamal.es">Contacto</a></span><small>Datos de LaLiga con fines informativos. Proyecto universitario MVP.</small></div></footer>
   <script src="app.js"></script>
 </body>
 </html>
