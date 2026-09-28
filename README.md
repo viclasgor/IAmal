@@ -1,6 +1,6 @@
-# IAmal — Portal de fútbol local
+# IAmal — Portal de fútbol
 
-**Problema:** No hay un sitio simple para seguir una liga amateur: resultados dispersos en WhatsApp, sin clasificación actualizada ni noticias centralizadas.
+**Problema:** Los resultados de la liga están dispersos y no hay un sitio simple con clasificación, noticias y plantillas centralizadas.
 
 **Solución (MVP):** Web estática con resultados reales de LaLiga, clasificación auto-calculada, noticias con buscador, plantillas reales y **IAmal**, un asistente que responde preguntas frecuentes.
 
@@ -9,11 +9,11 @@
 - Clasificación calculada en JS desde los partidos (`app.js:70`)
 - Noticias con buscador por palabra (ej: madrid, barcelona)
 - Plantillas por equipo (nombre, posición, dorsal)
-- AmalBot (bot 100% local, sin backend): responde líder, partidos, noticias, plantillas
+- IAmal (bot 100% local, sin backend): responde líder, partidos, noticias, plantillas
 
 ## Stack
 - HTML + CSS + JS vanilla (sin frameworks)
-- Sin backend ni base de datos (datos mock en `app.js`)
+- Sin backend ni base de datos (datos en `app.js`)
 - Despliegue: Vercel (hosting estático gratuito)
 
 ## Ejecutar en local
@@ -33,7 +33,7 @@ vercel dev
 
 ## Despliegue
 - URL producción: _PEGAR AQUÍ TU URL DE VERCEL_
-- Se despliega conectando el repo GitHub a Vercel (ver pasos abajo) o con `vercel --prod`.
+- Se despliega conectando el repo GitHub a Vercel o con `vercel --prod`.
 
 ## Estructura
 - `index.html` — estructura
