@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IAmal - Portal de fútbol</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <div class="logo">⚽ IAmal</div>
+      <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#resultados">Resultados</a>
+        <a href="#noticias">Noticias</a>
+        <a href="#plantillas">Plantillas</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="inicio" class="hero">
+      <h1>Tu portal de fútbol con IA</h1>
+      <p>Resultados reales de LaLiga, clasificación, noticias y plantillas. Pregunta a <strong>IAmal</strong> abajo a la derecha.</p>
+      <div class="hero-cards">
+        <div class="stat"><span id="stat-partidos">0</span><small>partidos</small></div>
+        <div class="stat"><span id="stat-equipos">0</span><small>equipos</small></div>
+        <div class="stat"><span id="stat-noticias">0</span><small>noticias</small></div>
+      </div>
+    </section>
+
+    <section id="resultados">
+      <h2>Resultados y clasificación</h2>
+      <input id="filtro-equipo" type="text" placeholder="Filtrar por equipo... (ej: Madrid)" />
+      <div id="lista-partidos" class="grid"></div>
+      <h3>Clasificación</h3>
+      <table id="tabla-clasi">
+        <thead><tr><th>Equipo</th><th>PJ</th><th>G</th><th>E</th><th>P</th><th>Pts</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <section id="noticias">
+      <h2>Noticias</h2>
+      <input id="buscador-noticias" type="text" placeholder="Buscar noticia... (ej: derbi)" />
+      <div id="lista-noticias" class="grid"></div>
+    </section>
+
+    <section id="plantillas">
+      <h2>Plantillas</h2>
+      <select id="selector-equipo"></select>
+      <div id="lista-jugadores" class="grid"></div>
+    </section>
+  </main>
+
+  <!-- IAmal: el bot se llama igual que el portal (IA + fútbol) -->
+  <div id="chat-btn" title="Abrir IAmal">💬</div>
+  <div id="chat-box" class="hidden">
+    <div class="chat-header">IAmal <button id="chat-close">✕</button></div>
+    <div id="chat-msgs"></div>
+    <div class="chat-quick">
+      <button data-q="¿Quién va líder?">Líder</button>
+      <button data-q="¿Qué partidos hay?">Partidos</button>
+      <button data-q="Dime noticias">Noticias</button>
+    </div>
+    <div class="chat-input">
+      <input id="chat-text" type="text" placeholder="Pregunta algo..." />
+      <button id="chat-send">Enviar</button>
+    </div>
+  </div>
+
+  <footer><div class="container footer-inner"><span>© 2026 IAmal · Portal de fútbol</span><span><a href="#inicio">Inicio</a> · <a href="#resultados">Resultados</a> · <a href="#noticias">Noticias</a> · <a href="#plantillas">Plantillas</a> · <a href="mailto:hola@iamal.es">Contacto</a></span><small>Datos de LaLiga con fines informativos. Proyecto universitario MVP.</small></div></footer>
+  <script src="app.js"></script>
+</body>
+</html>
